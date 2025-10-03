@@ -29,7 +29,7 @@ class Person {
     }
 }
 
-class Student extends Person {
+class Student__ extends Person {
     public void set() {
         //weight = 99; //private 접근 불가
         age = 30; //default 접근 가능
@@ -40,6 +40,6 @@ class Student extends Person {
 
 public class Ex5_2 {
     public static void main(String[] args) {
-        Student s = new Student();
+        Student__ s = new Student__();
     }
 }
