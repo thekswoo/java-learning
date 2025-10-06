@@ -36,3 +36,5 @@ public class P1 {
         System.out.println("id: " + s.getId());
     }
 }
+
+//super() 생성자를 이용해 자식클래스에서 부모클래스 생성자를 호출할 수 있다

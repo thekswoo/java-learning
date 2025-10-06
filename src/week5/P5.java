@@ -30,39 +30,20 @@ interface USB {
 
 
 interface USBA extends USB {
-    default void connectA(String name) {
-        System.out.println(name + ": USB-A connected");
-    }
-
-    @Override
-    void readUSB();
-}
+    void connectA();
 //read
-
+}
 
 interface USBC extends USB {
-    default void connectC(String name) {
-        System.out.println(name + ": USB-C connected");
-    }
-
-    @Override
-    void readUSB();
-
-    @Override
-    void writeUSB();
-
-}
+    void connectC();
 //read, write
+}
 
 class S22 extends Device implements USBC {
     private final int price = 1400;
 
     public S22(String name, int year) {
         super(name, year);
-    }
-
-    public void doConnect() {
-        connectC(super.getName());
     }
 
     @Override
@@ -76,9 +57,15 @@ class S22 extends Device implements USBC {
     }
 
     @Override
+    public void connectC() {
+        System.out.println(super.getName() + ": USB-C connected");
+    }
+
+    @Override
     public String getInfor() {
         return super.getName() + " " + super.getYear() + " $" + price;
     }
+
 }
 
 class MP3 extends Device implements USBA {
@@ -88,13 +75,14 @@ class MP3 extends Device implements USBA {
         super(name, year);
     }
 
-    public void doConnect() {
-        connectA(super.getName());
-    }
-
     @Override
     public void readUSB() {
         System.out.println(super.getName() + ": USB read");
+    }
+
+    @Override
+    public void connectA() {
+        System.out.println(super.getName() + ": USB-A connected");
     }
 
     @Override
@@ -141,10 +129,10 @@ public class P5 {
 
     private static void printInfor(Device device) {
         System.out.println(device.getInfor());
-        if (device instanceof S22) {
-            ((S22) device).doConnect();
-        } else if (device instanceof MP3) {
-            ((MP3) device).doConnect();
+        if (device instanceof USBA) {
+            ((USBA) device).connectA();
+        } else if (device instanceof USBC) {
+            ((USBC) device).connectC();
         }
     }
 
@@ -162,13 +150,13 @@ public class P5 {
         }
 
         public void readUSBs() {
-            for(int i = 0; i < count; i++) {
+            for (int i = 0; i < count; i++) {
                 devices[i].readUSB();
             }
         }
 
         public void writeUSBs() {
-            for(int i = 0; i < count; i++) {
+            for (int i = 0; i < count; i++) {
                 devices[i].writeUSB();
             }
         }
