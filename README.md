@@ -2,12 +2,16 @@
 ## 예제 코드 정리
 
 + week1
-  + sample code
-  + task
-+ week2
-  + sample code
-  + task 
++ week2 
 + week3
+  + Example
+  + Task
 + week4
+  + Example
+  + Task
 + week5
+  + Example
+  + Task
 + week6
+  + Example
+  + Task
