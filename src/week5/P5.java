@@ -65,7 +65,6 @@ class S22 extends Device implements USBC {
     public String getInfor() {
         return super.getName() + " " + super.getYear() + " $" + price;
     }
-
 }
 
 class MP3 extends Device implements USBA {
