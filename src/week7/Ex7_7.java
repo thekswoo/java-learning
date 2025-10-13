@@ -8,11 +8,11 @@ package week7;
 
 import java.util.*;
 
-class Student {
+class Student_7 {
     private int id;
     private String tel;
 
-    public Student(int id, String tel) {
+    public Student_7(int id, String tel) {
         this.id = id;
         this.tel = tel;
     }
@@ -28,11 +28,11 @@ class Student {
 
 public class Ex7_7 {
     public static void main(String[] arges) {
-        HashMap<String, Student> map = new HashMap<String, Student>();
+        HashMap<String, Student_7> map = new HashMap<String, Student_7>();
 
-        map.put("황기태", new Student(1, "010-111-1111"));
-        map.put("이재문", new Student(2, "010-222-2222"));
-        map.put("김남윤", new Student(3, "010-333-3333"));
+        map.put("황기태", new Student_7(1, "010-111-1111"));
+        map.put("이재문", new Student_7(2, "010-222-2222"));
+        map.put("김남윤", new Student_7(3, "010-333-3333"));
 
         Scanner scanner = new Scanner(System.in);
 
@@ -44,7 +44,7 @@ public class Ex7_7 {
                 break;
             }
 
-            Student student = map.get(name);
+            Student_7 student = map.get(name);
 
             if (student == null) {
                 System.out.println(student + "는 없는 사람입니다.");
