@@ -19,13 +19,13 @@ public class Ex10_4 extends JFrame {
         setSize(300, 300);
         setVisible(true);
 
-        c.addMouseListener(new MyMouseListener());
+        c.addMouseListener(new MyMouseAdapter());
         la.setLocation(50, 50);
         la.setSize(200, 20);
         c.add(la);
     }
 
-    class MyMouseListener extends MouseAdapter {
+    class MyMouseAdapter extends MouseAdapter {
         public void mousePressed(MouseEvent e) {
             int x = e.getX();
             int y = e.getY();
