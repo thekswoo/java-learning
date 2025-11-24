@@ -15,7 +15,7 @@ public class Ex9_4 extends JFrame {
 
         Container c = getContentPane();
 
-        c.setLayout(new BorderLayout(30,20));
+        c.setLayout(new BorderLayout(0,0)); //수평 간격 30, 수직 간격 20
         c.add(new JButton("Calculate"), BorderLayout.CENTER);
         c.add(new JButton("add"),BorderLayout.NORTH);
         c.add(new JButton("sub"),BorderLayout.SOUTH);

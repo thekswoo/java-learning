@@ -15,7 +15,7 @@ public class Ex9_3 extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Container c = getContentPane();
 
-        c.setLayout(new FlowLayout(FlowLayout.LEFT, 30, 40));
+        c.setLayout(new FlowLayout(FlowLayout.LEFT, 30, 40)); //수평 간격 30 ,수직 간격 40
         c.add(new JButton("add"));
         c.add(new JButton("sub"));
         c.add(new JButton("mul"));
