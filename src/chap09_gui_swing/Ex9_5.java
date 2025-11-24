@@ -13,7 +13,7 @@ public class Ex9_5 extends JFrame {
         setTitle("GridLayout Sample");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //사용자가 창을 닫으면 완전히 닫힘
 
-        GridLayout grid = new GridLayout(4, 2); //4행 2열 크기의 표 형태 레이아
+        GridLayout grid = new GridLayout(4, 2); //4행 2열 크기의 표 형태 레이아웃
         grid.setVgap(5); //각 행의 수직 간격을 5픽셀로 설정
 
         Container c = getContentPane();
